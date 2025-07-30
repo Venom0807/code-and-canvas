@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { FaFacebookF, FaDribbble, FaInstagram, FaPaperPlane, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
-
+import { Link } from 'react-router-dom';
 const Footer = () => {
   const newsletterForm = useRef();
 
@@ -24,7 +24,11 @@ const Footer = () => {
       alert("Something went wrong. Try again.");
     });
   };
+  const [expanded, setExpanded] = useState(false);
 
+  const fullText =
+    "Code & Canvas is a creative tech studio blending web development with innovative UI/UX design. We build visually stunning, high-performance websites tailored to modern digital experiences.";
+  const shortText = fullText.slice(0, 100) + "...";
   return (
     <footer className="bg-[#0a0119] text-white px-6 md:px-20 py-16 text-sm">
       {/* Social Icons */}
@@ -47,33 +51,38 @@ const Footer = () => {
       {/* Links */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-white/80">
         <div>
-          <h3 className="text-white font-semibold mb-4">About us</h3>
-          <p>
-            Code & Canvas is a creative tech studio blending web development with innovative UI/UX design. 
-            We build visually stunning, high-performance websites tailored to modern digital experiences.
-          </p>
-          <a href="#" className="text-cyan-400 mt-4 inline-block font-semibold">Read more →</a>
-        </div>
+      <h3 className="text-white font-semibold mb-4">About us</h3>
+      <p className="text-white/80">
+        {expanded ? fullText : shortText}
+      </p>
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="text-cyan-400 mt-4 inline-block font-semibold transition hover:underline"
+      >
+        {expanded ? "Show less ↑" : "Read more →"}
+      </button>
+    </div>
 
         <div>
-          <h3 className="text-white font-semibold mb-4">Who we are</h3>
+          <h3 className="text-white font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#">Locations</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/portfolio">Portfolio</Link></li> 
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-white font-semibold mb-4">Resources</h3>
+          <ul className="space-y-2">
+            <li><Link to="#">Terms and Conditions</Link></li>
+            <li><Link to="#">Help & FAQ</Link></li>
+            <li><Link to="#">Privacy Policy</Link></li> 
+            <li><Link to="#">Cookies Policy</Link></li>
           </ul>
         </div>
 
-        <div>
-          <h3 className="text-white font-semibold mb-4">Our work</h3>
-          <ul className="space-y-2">
-            <li><a href="#">Feature</a></li>
-            <li><a href="#">Latest</a></li>
-            <li><a href="#">Browse Archive</a></li>
-            <li><a href="#">Web Design Showcase</a></li>
-          </ul>
-        </div>
 
         {/* Newsletter Form */}
         <div>

@@ -49,14 +49,14 @@ const projects = [
 const Projects = () => {
   return (
     <section className="bg-[#0b0423] ">
-      <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-[200px] gap-3">
         {projects.map((project, index) => (
           <a
             key={index}
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className={`relative overflow-hidden group rounded-md ${project.span}`}
+           className={`relative overflow-hidden group rounded-md ${project.span ? `md:${project.span}` : ''}`}
           >
             <img
               src={project.image}

@@ -1,5 +1,6 @@
-import React from 'react';
-import { FaFacebookF, FaGlobe, FaInstagram, FaLinkedinIn,  } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaFacebookF, FaGlobe, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const teamMembers = [
   {
@@ -26,10 +27,18 @@ const teamMembers = [
   },
 ];
 
-import { useNavigate } from 'react-router-dom';
-
 const TeamSection = () => {
   const navigate = useNavigate();
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleCardClick = (index) => {
+    if (activeIndex === index) {
+      setActiveIndex(null);
+    } else {
+      setActiveIndex(index);
+    }
+  };
+
   return (
     <section
       className="relative bg-cover bg-center py-20 px-6 md:px-16 min-h-[90vh] mainTeam"
@@ -43,38 +52,47 @@ const TeamSection = () => {
       </div>
 
       {/* Team Members */}
-      <div className="flex justify-center items-center gap-20 pt-40 md:pt-35 teamMembers">
-        {teamMembers.map((member, index) => (
-          <div
-            key={index}
-            className={`relative group w-80 h-[420px] rounded-lg shadow-lg overflow-hidden ${index === 0 ? '-mt-10' : 'mt-10'} singleMember`}
-          >
-            <img
-              src={member.image}
-              alt={member.name}
-              className="w-full h-full object-cover"
-            />
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            {/* Info on Hover */}
-            <div className="absolute bottom-0 left-0 w-full px-4 pb-8 pt-10 text-white translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
-              <h3 className="text-lg font-bold text-center tracking-wide">{member.name}</h3>
-              <p className="text-white/70 text-sm mt-1 text-center">{member.role}</p>
-              <div className="flex justify-center gap-4 mt-3">
-                {member.socials.map((social, idx) => (
-                  <a
-                    key={idx}
-                    href={social.link}
-                    target='blank'
-                    className="text-white hover:text-cyan-400 transition"
-                  >
-                    {social.icon}
-                  </a>
-                ))}
+      <div className="flex justify-center items-center gap-10 pt-40 flex-wrap">
+        {teamMembers.map((member, index) => {
+          const isActive = activeIndex === index;
+          return (
+            <div
+              key={index}
+              onClick={() => handleCardClick(index)}
+              className={`relative group w-72 h-[420px] rounded-lg shadow-lg overflow-hidden cursor-pointer ${index === 0 ? '-mt-10' : 'mt-10'} singleMember`}
+            >
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-full object-cover"
+              />
+              {/* Gradient Overlay */}
+              <div className={`absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent transition-opacity duration-500 ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
+              {/* Info Section */}
+              <div
+                className={`absolute bottom-0 left-0 w-full px-4 pb-8 pt-10 text-white transition-all duration-500 ease-in-out ${
+                  isActive ? 'translate-y-0' : 'translate-y-full group-hover:translate-y-0'
+                }`}
+              >
+                <h3 className="text-lg font-bold text-center tracking-wide">{member.name}</h3>
+                <p className="text-white/70 text-sm mt-1 text-center">{member.role}</p>
+                <div className="flex justify-center gap-4 mt-3">
+                  {member.socials.map((social, idx) => (
+                    <a
+                      key={idx}
+                      href={social.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-white hover:text-cyan-400 transition"
+                    >
+                      {social.icon}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Meet Button */}
