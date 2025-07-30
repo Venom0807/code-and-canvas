@@ -76,10 +76,10 @@ const Footer = () => {
         <div>
           <h3 className="text-white font-semibold mb-4">Resources</h3>
           <ul className="space-y-2">
-            <li><Link to="#">Terms and Conditions</Link></li>
-            <li><Link to="#">Help & FAQ</Link></li>
-            <li><Link to="#">Privacy Policy</Link></li> 
-            <li><Link to="#">Cookies Policy</Link></li>
+            <li><Link to="/terms">Terms and Conditions</Link></li>
+            <li><Link to="/faq">Help & FAQ</Link></li>
+            <li><Link to="/privacy">Privacy Policy</Link></li> 
+            <li><Link to="/cookies">Cookies Policy</Link></li>
           </ul>
         </div>
 

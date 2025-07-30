@@ -1,4 +1,3 @@
-// src/components/Projects.jsx
 import React from "react";
 
 const projects = [
@@ -48,15 +47,40 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="bg-[#0b0423] ">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-[200px] gap-3">
+    <section className="bg-[#0b0423] px-4 py-10">
+      {/* For small screens: simple vertical */}
+      <div className="block md:hidden space-y-4">
         {projects.map((project, index) => (
           <a
             key={index}
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-           className={`relative overflow-hidden group rounded-md ${project.span ? `md:${project.span}` : ''}`}
+            className="block overflow-hidden rounded-md group"
+          >
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div className="w-12 h-12 bg-white bg-opacity-20 border border-white rounded-full flex items-center justify-center">
+                <div className="w-3 h-3 border-l-4 border-t-4 border-white rotate-45"></div>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {/* For medium & larger screens: original grid layout */}
+      <div className="hidden md:grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] gap-3">
+        {projects.map((project, index) => (
+          <a
+            key={index}
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`relative overflow-hidden group rounded-md ${project.span}`}
           >
             <img
               src={project.image}
