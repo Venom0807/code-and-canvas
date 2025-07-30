@@ -7,42 +7,43 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 const testimonials = [
   {
-    text: "Videographer delivers such a great service that it can benefit all kinds of people from any number.",
+    text: "Code & Canvas built us a fast, responsive website that looks amazing on every device. Highly recommend!",
     name: "Krista Attorn",
-    role: "Web Designer",
+    role: "Founder, Bloom Agency",
     img: "ta-1.jpg",
   },
   {
-    text: "Great experience working with them. Highly professional and responsive team.",
+    text: "Their UI/UX design brought a fresh and intuitive experience to our platform. Our users love it.",
     name: "James Warren",
-    role: "Product Manager",
+    role: "Product Manager, TechNova",
     img: "ta-2.jpg",
   },
   {
-    text: "The output exceeded expectations. Everything was delivered on time.",
+    text: "Delivered a full-stack website on time with zero bugs. Everything just worked out perfectly.",
     name: "Lina Moore",
-    role: "Creative Director",
+    role: "CTO, BrightLearn",
     img: "ta-3.jpg",
   },
   {
-    text: "Their design approach is top-notch and very collaborative.",
+    text: "Superb attention to detail and a collaborative design process. They understood our brand vision from day one.",
     name: "Jason Ray",
-    role: "UX Specialist",
+    role: "UX Lead, Fintelligence",
     img: "ta-1.jpg",
   },
   {
-    text: "Always available for feedback and very quick turnarounds!",
+    text: "From landing pages to animations, everything felt modern and smooth. They truly go the extra mile.",
     name: "Diana Clark",
-    role: "Marketing Head",
+    role: "Marketing Head, TrendFlick",
     img: "ta-2.jpg",
   },
   {
-    text: "One of the best agencies we’ve worked with in a long time.",
+    text: "One of the best teams we’ve worked with — creative, fast, and always open to feedback.",
     name: "Tom Baker",
-    role: "Startup Founder",
+    role: "Startup Founder, LaunchPad",
     img: "ta-3.jpg",
   },
 ];
+
 
 const TestimonialSlider = () => {
   return (
