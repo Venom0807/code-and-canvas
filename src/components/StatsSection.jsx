@@ -6,22 +6,22 @@ import { useInView } from 'react-intersection-observer';
 const stats = [
   {
     image: "ci-1.png" ,
-    value: 10,
+    value: 50,
     label: 'Total Projects',
   },
   {
     image: "ci-2.png" ,
-    value: 8,
+    value: 45,
     label: 'Happy Clients',
   },
   {
     image: "ci-3.png" ,
-    value: 8,
+    value: 50,
     label: 'Complete Projects',
   },
   {
     image: "ci-4.png" ,
-    value: 4,
+    value: 25,
     label: 'Perspective Clients',
   },
 ];
@@ -53,6 +53,7 @@ const StatsSection = () => {
                   <img src={stat.image} alt="" />
                   <div className="text-3xl font-bold mt-1">
                     {inView ? <CountUp end={stat.value} duration={2} /> : 0}
+                    {stat.label === "Total Projects" && "+"}
                   </div>
                   <p className="text-xs mt-1 text-center text-white/80">{stat.label}</p>
                 </div>
