@@ -105,7 +105,7 @@ const Navbar = () => {
             <a href="https://www.linkedin.com/in/code-canvas-a37571377/" target="_blank"><FaLinkedin /></a>
             <a href="https://www.instagram.com/thecodeandcanvas_/?__pwa=1" target="_blank"><FaInstagram /></a>
             <a href="https://wa.me/923194189357" target="_blank"><FaWhatsapp /></a>
-            <a href="#" onClick={e => e.preventDefault()}><FaDribbble /></a>
+            <a href="#" onClick={e => e.preventDefault()}><FaBehance /></a>
           </div>
         </div>
       )}
