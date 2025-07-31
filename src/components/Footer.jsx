@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { FaFacebookF, FaDribbble, FaInstagram, FaPaperPlane, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebookF,  FaInstagram, FaPaperPlane, FaLinkedin, FaWhatsapp, FaBehance } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import { Link } from 'react-router-dom';
 const Footer = () => {
@@ -39,10 +39,10 @@ const Footer = () => {
         </div>
         <div className="flex space-x-3">
           <a target="blank" href="https://www.facebook.com/profile.php?id=61578840120984" className="hover:text-cyan-400"><FaFacebookF /></a>
-          <a target="blank" href="https://www.linkedin.com/in/code-canvas-a37571377/" className="hover:text-cyan-400"><FaLinkedin /></a>
+          <a target="blank" href="https://www.linkedin.com/in/code-and-canvas-464a17377/" className="hover:text-cyan-400"><FaLinkedin /></a>
           <a target="blank" href="https://www.instagram.com/thecodeandcanvas_/?__pwa=1" className="hover:text-cyan-400"><FaInstagram /></a>
           <a target="blank" href="https://wa.me/923194189357" className="hover:text-cyan-400"><FaWhatsapp /></a>
-          <a href="#" className="hover:text-cyan-400"><FaDribbble /></a>
+          <a href="#" className="hover:text-cyan-400"><FaBehance /></a>
         </div>
       </div>
 

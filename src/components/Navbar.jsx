@@ -3,9 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import {
   FaFacebookF,
   FaInstagram,
-  FaDribbble,
   FaLinkedin,
   FaWhatsapp,
+  FaBehance,
 } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 
@@ -71,10 +71,10 @@ const Navbar = () => {
         {/* Desktop Social Icons */}
         <div className="hidden md:flex space-x-4 text-[16px] text-white">
           <a href="https://www.facebook.com/profile.php?id=61578840120984" target="_blank" className="hover:text-cyan-400"><FaFacebookF /></a>
-          <a href="https://www.linkedin.com/in/code-canvas-a37571377/" target="_blank" className="hover:text-cyan-400"><FaLinkedin /></a>
+          <a href="https://www.linkedin.com/in/code-and-canvas-464a17377/" target="_blank" className="hover:text-cyan-400"><FaLinkedin /></a>
           <a href="https://www.instagram.com/thecodeandcanvas_/?__pwa=1" target="_blank" className="hover:text-cyan-400"><FaInstagram /></a>
           <a href="https://wa.me/923194189357" target="_blank" className="hover:text-cyan-400"><FaWhatsapp /></a>
-          <a href="#" onClick={e => e.preventDefault()} className="hover:text-cyan-400"><FaDribbble /></a>
+          <a href="#" onClick={e => e.preventDefault()} className="hover:text-cyan-400"><FaBehance /></a>
         </div>
       </div>
 
