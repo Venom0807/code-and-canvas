@@ -7,6 +7,7 @@ import StatsSection from "../components/StatsSection";
 import TeamSection from "../components/TeamSection";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
+import WhatsappButton from "../../components/WhatsappButton";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <TeamSection />
       <CallToAction />
       <Footer />
+      <WhatsappButton />
     </div>
   );
 };
