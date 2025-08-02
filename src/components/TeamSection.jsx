@@ -41,7 +41,7 @@ const TeamSection = () => {
 
   return (
     <section
-      className="relative bg-cover bg-center py-20 px-6 md:px-16 min-h-[90vh] mainTeam"
+      className="relative bg-cover bg-center py-20 px-6 md:px-16 min-h-[95vh] mainTeam flex flex-col items-center justify-between"
       style={{ backgroundImage: "url('team-bg.jpg')" }}
     >
       {/* Heading */}
@@ -52,7 +52,7 @@ const TeamSection = () => {
       </div>
 
       {/* Team Members */}
-      <div className="flex justify-center items-center gap-10 pt-40 flex-wrap">
+      <div className="flex justify-center items-center gap-10 pt-40 flex-wrap mb-20">
         {teamMembers.map((member, index) => {
           const isActive = activeIndex === index;
           return (
@@ -93,9 +93,6 @@ const TeamSection = () => {
             </div>
           );
         })}
-      </div>
-
-      {/* Meet Button */}
       <div className="absolute bottom-10 right-6 md:right-16 meetButton">
         <button
           className="relative px-5 py-4 text-white font-semibold uppercase tracking-wide group"
@@ -106,6 +103,9 @@ const TeamSection = () => {
           <span className="relative z-10">Meet Our Team</span>
         </button>
       </div>
+      </div>
+
+      {/* Meet Button */}
     </section>
   );
 };
