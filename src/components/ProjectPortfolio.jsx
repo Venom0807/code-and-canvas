@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Acme",
     image: "p2.png",
-    link: "https://acme-drab-three.vercel.app/",
+    link: "https://acme0.vercel.app/",
     category: "Web",
   },
   {
