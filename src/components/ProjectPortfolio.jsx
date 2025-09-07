@@ -13,7 +13,7 @@ const projects = [
   {
     title: "E-Store",
     image: "p4.png",
-    link: "https://e-store-gules-six.vercel.app/",
+    link: "https://e-store0.vercel.app/",
     category: "eCommerce",
   },
   {
