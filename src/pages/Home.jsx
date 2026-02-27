@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div
       className="h-[80vh] bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/hero-1.jpg')" }}
+      style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('/A man coding on a computer-1.webp')" }}
     >
       <Navbar />
       <Hero />

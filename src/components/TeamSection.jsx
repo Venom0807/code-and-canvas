@@ -74,19 +74,19 @@ const TeamSection = () => {
       </div>
 
       {/* Team Members */}
-      <div className="flex justify-center items-center gap-10 pt-40 flex-wrap mb-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-48 pb-48 justify-items-center">
         {teamMembers.map((member, index) => {
           const isActive = activeIndex === index;
           return (
             <div
               key={index}
               onClick={() => handleCardClick(index)}
-              className={`relative group w-72 h-[420px] rounded-lg shadow-lg overflow-hidden cursor-pointer singleMember
-              ${index === 0 ? '-mt-10' : ''}
-              ${index === 1 ? 'mt-6' : ''}
-              ${index === 2 ? 'mt-6' : ''}
-              ${index === 3 ? 'mt-6' : ''}
-              `}
+              className={`relative group w-72 h-[420px] rounded-lg shadow-lg overflow-hidden cursor-pointer singleMember transform transition-transform duration-300
+              ${index === 0 ? 'lg:translate-y-0' : ''}
+              ${index === 1 ? 'lg:translate-y-[40px]' : ''}
+              ${index === 2 ? 'lg:translate-y-[80px]' : ''}
+              ${index === 3 ? 'lg:translate-y-[120px]' : ''}
+            `}
             >
               <img
                 src={member.image}
@@ -120,6 +120,9 @@ const TeamSection = () => {
             </div>
           );
         })}
+      </div>
+
+      {/* Meet Button */}
       <div className="absolute bottom-10 right-6 md:right-16 meetButton">
         <button
           className="relative px-5 py-4 text-white font-semibold uppercase tracking-wide group"
@@ -130,9 +133,6 @@ const TeamSection = () => {
           <span className="relative z-10">Meet Our Team</span>
         </button>
       </div>
-      </div>
-
-      {/* Meet Button */}
     </section>
   );
 };
