@@ -1,7 +1,7 @@
 // src/components/ProjectsPortfolio.jsx
 import React, { useState } from "react";
 
-const categories = ["All", "Web", "eCommerce", "Photography", "Design"];
+const categories = ["All", "Web", "eCommerce", "Photography", "Design", "Portal"];
 
 const projects = [
   {
@@ -45,6 +45,12 @@ const projects = [
     image: "p6.png",
     link: "https://neve-zeta.vercel.app/",
     category: "Photography",
+  },
+  {
+    title: "Lahorelink Logistics",
+    image: "p9.png",
+    link: "https://lahorelinklogistics.com/",
+    category: "Portal",
   },
 ];
 

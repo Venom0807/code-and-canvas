@@ -25,6 +25,28 @@ const teamMembers = [
       { icon: <FaGlobe />, link: 'https://umer-portfolio-frontend.vercel.app/' },
     ],
   },
+  {
+    name: 'Yawar Hayat',
+    role: 'Business Development Manager',
+    image: 'yawar.png',
+    socials: [
+      { icon: <FaFacebookF />, link: 'https://www.facebook.com/profile.php?id=100067683253198' },
+      { icon: <FaLinkedinIn />, link: 'https://www.linkedin.com/in/umer-mani/' },
+      { icon: <FaInstagram />, link: 'https://www.instagram.com/umerusmann13/?__pwa=1' },
+      { icon: <FaGlobe />, link: 'https://umer-portfolio-frontend.vercel.app/' },
+    ],
+  },
+  {
+    name: 'Eman Fatima',
+    role: 'Frontend Developer',
+    image: 'eman.jpg',
+    socials: [
+      { icon: <FaFacebookF />, link: 'https://www.facebook.com/profile.php?id=100067683253198' },
+      { icon: <FaLinkedinIn />, link: 'https://www.linkedin.com/in/umer-mani/' },
+      { icon: <FaInstagram />, link: 'https://www.instagram.com/umerusmann13/?__pwa=1' },
+      { icon: <FaGlobe />, link: 'https://umer-portfolio-frontend.vercel.app/' },
+    ],
+  },
 ];
 
 const TeamSection = () => {
@@ -59,7 +81,12 @@ const TeamSection = () => {
             <div
               key={index}
               onClick={() => handleCardClick(index)}
-              className={`relative group w-72 h-[420px] rounded-lg shadow-lg overflow-hidden cursor-pointer ${index === 0 ? '-mt-10' : 'mt-10'} singleMember`}
+              className={`relative group w-72 h-[420px] rounded-lg shadow-lg overflow-hidden cursor-pointer singleMember
+              ${index === 0 ? '-mt-10' : ''}
+              ${index === 1 ? 'mt-6' : ''}
+              ${index === 2 ? 'mt-6' : ''}
+              ${index === 3 ? 'mt-6' : ''}
+              `}
             >
               <img
                 src={member.image}
