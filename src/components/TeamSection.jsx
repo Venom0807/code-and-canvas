@@ -30,10 +30,10 @@ const teamMembers = [
     role: 'Business Development Manager',
     image: 'yawar.png',
     socials: [
-      { icon: <FaFacebookF />, link: 'https://www.facebook.com/profile.php?id=100067683253198' },
-      { icon: <FaLinkedinIn />, link: 'https://www.linkedin.com/in/umer-mani/' },
-      { icon: <FaInstagram />, link: 'https://www.instagram.com/umerusmann13/?__pwa=1' },
-      { icon: <FaGlobe />, link: 'https://umer-portfolio-frontend.vercel.app/' },
+      { icon: <FaFacebookF />, link: 'https://www.facebook.com/share/17kYnBA3iC/' },
+      { icon: <FaLinkedinIn />, link: 'https://www.linkedin.com/in/yawar-hayyat-2a34a1337?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+      { icon: <FaInstagram />, link: 'https://www.instagram.com/ywr_hyt/?__pwa=1' },
+      { icon: <FaGlobe />, link: 'https://yawarhayyat.vercel.app/' },
     ],
   },
   {
@@ -41,10 +41,10 @@ const teamMembers = [
     role: 'Frontend Developer',
     image: 'eman.jpg',
     socials: [
-      { icon: <FaFacebookF />, link: 'https://www.facebook.com/profile.php?id=100067683253198' },
-      { icon: <FaLinkedinIn />, link: 'https://www.linkedin.com/in/umer-mani/' },
-      { icon: <FaInstagram />, link: 'https://www.instagram.com/umerusmann13/?__pwa=1' },
-      { icon: <FaGlobe />, link: 'https://umer-portfolio-frontend.vercel.app/' },
+      { icon: <FaFacebookF />, link: 'https://www.facebook.com/profile.php?id=61551102983988&rdid=HNavwoaFgrqrV87W&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1GW51zW2Yp%2F#' },
+      { icon: <FaLinkedinIn />, link: 'https://www.linkedin.com/in/eman-fatima-muhammad-arif-ali-03317a3b4/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+      { icon: <FaInstagram />, link: 'https://www.instagram.com/emanf_atima57/?__pwa=1' },
+      { icon: <FaGlobe />, link: 'https://my-portfolio-seven-phi-83.vercel.app/index.html' },
     ],
   },
 ];
