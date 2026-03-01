@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const teamMembers = [
   {
     name: 'Ahmer Khan',
-    role: 'Web Developer',
+    role: 'Full-Stack Web Developer',
     image: 'ahmer.jpg',
     socials: [
       { icon: <FaFacebookF />, link: 'https://www.facebook.com/ahmer.khan.1088/' },
